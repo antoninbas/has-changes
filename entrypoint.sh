@@ -25,6 +25,9 @@ THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 source $THIS_DIR/check_changes.sh
 
+pwd
+git log
+
 cat "$GITHUB_EVENT_PATH"
 
 PR_BASE_SHA=$(jq -r '.pull_request.base.sha' "$GITHUB_EVENT_PATH")
